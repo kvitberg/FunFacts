@@ -5,14 +5,20 @@
     android:id="@+id/activity_fun_facts"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.scottkvitberg.funfacts.FunFactsActivity">
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.scottkvitberg.funfacts.FunFactsActivity"
+    android:background="#51b46d">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Did you know?"
-        android:id="@+id/textView4"
-        tools:textSize="24sp"
+        android:id="@+id/defaultTextView"
+        android:textSize="24sp"
+        android:textColor="#9bffffff"
         app:layout_constraintLeft_toLeftOf="@+id/activity_fun_facts"
         app:layout_constraintTop_toTopOf="@+id/activity_fun_facts"
         app:layout_constraintRight_toRightOf="@+id/activity_fun_facts"
@@ -23,21 +29,25 @@
         android:text="This is going to display our random facts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        tools:textSize="24sp"
+        android:id="@+id/factTextView"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        tools:textAlignment="center"
         app:layout_constraintLeft_toLeftOf="@+id/activity_fun_facts"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/defaultTextView"
         app:layout_constraintRight_toRightOf="@+id/activity_fun_facts"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_fun_facts"
-        app:layout_constraintHorizontal_bias="0.04" />
+        app:layout_constraintBottom_toTopOf="@+id/showFactButton" />
 
     <Button
-        android:text="Button"
-        android:layout_width="89dp"
-        android:layout_height="49dp"
-        android:id="@+id/button"
+        android:text="Show another"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:id="@+id/showFactButton"
+        tools:layout_width="match_parent"
+        tools:layout_height="wrap_content"
+        android:background="#ffffff"
         app:layout_constraintLeft_toLeftOf="@+id/activity_fun_facts"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/factTextView"
         app:layout_constraintRight_toRightOf="@+id/activity_fun_facts"
         app:layout_constraintBottom_toBottomOf="@+id/activity_fun_facts" />
 
