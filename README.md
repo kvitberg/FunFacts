@@ -1,6 +1,6 @@
 # FunFacts
 
-A simple application to display random facts. 
+A simple application which display a random fact. 
 Default title with a random fact from the facts list (under) with a random background color chosen from the color list (under). A simple button is used to change to the next fact.
 
 ##Facts used in the app:
