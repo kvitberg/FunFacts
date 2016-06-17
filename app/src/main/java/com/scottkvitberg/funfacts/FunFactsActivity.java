@@ -10,10 +10,10 @@ import android.widget.TextView;
 public class FunFactsActivity extends AppCompatActivity {
 
     // Declare view variables
-    private TextView mFactsTextView;
-    private Button mShowFactButton;
+    private TextView mQuoteTextView;
+    private Button mShowQuoteButton;
 
-    private FactBook mFactBook = new FactBook();
+    private QuotesBook mQuotesBook = new QuotesBook();
     private ColorWheel mColorWheel = new ColorWheel();
 
     private RelativeLayout mRelativeLayout;
@@ -25,21 +25,21 @@ public class FunFactsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fun_facts);
 
         // Assign the views from the layout to the corresponding variables
-        mFactsTextView = (TextView) findViewById(R.id.factTextView);
-        mShowFactButton = (Button) findViewById(R.id.showFactButton);
+        mQuoteTextView = (TextView) findViewById(R.id.quoteTextView);
+        mShowQuoteButton = (Button) findViewById(R.id.showQuoteButton);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fact = mFactBook.getFact();
+                String fact = mQuotesBook.getQuote();
                 int color = mColorWheel.getColors();
                 //Update screen with
-                mFactsTextView.setText(fact);
+                mQuoteTextView.setText(fact);
                 mRelativeLayout.setBackgroundColor(color);
-                mShowFactButton.setTextColor(color);
+                mShowQuoteButton.setTextColor(color);
             }
         };
-        mShowFactButton.setOnClickListener(listener);
+        mShowQuoteButton.setOnClickListener(listener);
     }
 }
